@@ -1,22 +1,10 @@
 class Solution {
 public:
-    unordered_set<int> us;
-    int thirdMax(vector<int>& nums) 
-    {
-        unordered_set<int>us;
-        for(auto num : nums)
-        {
-          us.insert(num);
-        }
-    if (us.size() < 3) {
-            return *max_element(nums.begin(), nums.end());
-        }
-
-        // Sort the set and retrieve the third maximum
-        vector<int> distinct_nums(us.begin(), us.end());
-        sort(distinct_nums.begin(), distinct_nums.end());
-
-        // Return the third maximum
-        return distinct_nums[distinct_nums.size() - 3];
+    int thirdMax(vector<int>& nums) {
+        set<int>s (nums.begin(),nums.end());
+        vector<int>result(s.begin(),s.end());
+        sort(result.begin(),result.end());
+        if(result.size()<3) return result[result.size()-1];
+        return result[result.size()-3];
     }
 };
