@@ -3,6 +3,7 @@ class Solution
 public:
     vector<vector<int>> fourSum(vector<int> &nums, int target)
     {
+        sort(nums.begin(),nums.end());
         int n=nums.size();
         if(n<4){
             return {};
