@@ -9,7 +9,6 @@ public:
             return {};
         }
         vector<vector<int>> v;
-        sort(nums.begin(), nums.end());
         for (int i = 0; i < n - 3; i++)
         {
             if (i > 0 && nums[i] == nums[i - 1])
