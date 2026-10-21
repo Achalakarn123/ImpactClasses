@@ -21,7 +21,9 @@ public:
     //     }
     //     return j;
     // }
-   if (nums.size() <= 2) return nums.size();
+    if(nums.size()<=2){
+        return nums.size();
+    }
    int cm=2;
    int off=2;
    while(cm<nums.size()){
@@ -34,28 +36,5 @@ public:
     cm++;
    }
  return off;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 };
