@@ -21,7 +21,7 @@ public:
     //     }
     //     return j;
     // }
-    if(nums.size()<2){
+    if(nums.size()<=2){
         return nums.size();
     }
    int cm=2;
